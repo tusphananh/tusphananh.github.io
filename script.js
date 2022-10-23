@@ -43,9 +43,11 @@ const renderRightCol = () => {
     container.appendChild(
       createElement("p", "right-content__tittle", item.title)
     );
+    const content = document.createElement("div");
     item?.contents.forEach((text) => {
-      container.appendChild(createElement("p", "right-content__text", text));
+      content.appendChild(createElement("p", "right-content__text", text));
     });
+    container.appendChild(content);
 
     rightCol.appendChild(container);
   });

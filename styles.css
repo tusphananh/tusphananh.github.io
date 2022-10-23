@@ -14,11 +14,17 @@ body {
   background-color: black;
 }
 
-.thin-line {
+.thin-line,
+.thin-line--hide {
   width: 100%;
   height: 0px;
   border: 0.5px solid #73808d;
   opacity: 0.3;
+}
+
+.thin-line--hide {
+  margin-top: 28px;
+  display: none;
 }
 
 .container {
@@ -141,4 +147,45 @@ body {
   padding: 8px 0;
   margin: 0 0 0 8px;
   text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    grid-area: header;
+  }
+
+  .left-col {
+    grid-area: leftCol;
+  }
+
+  .right-col {
+    grid-area: rightCol;
+  }
+
+  .right-col__content {
+    display: grid;
+    grid-template-columns: 50% auto;
+  }
+
+  .avatar {
+    margin-left: auto;
+  }
+
+  .thin-line {
+    grid-area: thinLine;
+  }
+
+  .thin-line--hide {
+    display: unset;
+    grid-area: thinLineDisplay;
+  }
+
+  .container {
+    grid-template-areas:
+      "header header"
+      "thinLine thinLine"
+      "leftCol leftCol"
+      "thinLineDisplay thinLineDisplay"
+      "rightCol rightCol";
+  }
 }
