@@ -1,97 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CV</title>
-    <script src="./script.js"></script>
-    <link rel="stylesheet" href="./style.css">
+    <title>Resume</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./constants.js"></script>
   </head>
-  
   <body>
-    <div id="header-intro">
-      <h1 id="name">TU PHAN</h1>
-      <p id="role">SOFTWARE ENGINEERING</p>
-      <img src="./avatar.jpeg" alt="Avatar" id="avatar">
-    </div>
-    
-    <div id="main-intro">
-      <div id="left-intro">
-        <p class="header-paragraph" style="margin-top: 0px;">EXPERIENCE</p>
-        <p class="paragraph">None</p>
-        <p class="header-paragraph" style="margin-top: 40px;">PERSONAL PROJECT</p>
-        <a class="paragraph"  style="font-weight: 600;" href="https://github.com/tusphananh/CE-Project">Hotel Management - Java</a></br>
-        <a class="paragraph"  style="font-weight: 600;" href="https://github.com/tusphananh/Rent-4.0">Rent 4.0 - NodeJS</a></br>
-        <a class="paragraph"  style="font-weight: 600;" href="https://github.com/tusphananh/COSIM">COSIM - Python</a></br>
-    
-        <p class="header-paragraph" style="margin-top: 20px;">PERSONAL INFOMATION</p>
-        
-        <p class="paragraph" style='font-weight: 600; '>Full Name </p>
-        <p class="paragraph">Phan Anh Tu</p>
-        <p class="paragraph" style='font-weight: 600;'>Date of Birth </p>
-        <p class="paragraph">06-03-2000</p>
-        <p class="paragraph" style='font-weight: 600;'>Address </p>
-        <p class="paragraph">KTX khu A Lang Dai Hoc-Thu Duc</p>
-
-        <p class="header-paragraph" style="margin-top: 30px;">ABOUT</p>
-        <p class="paragraph">I am currently in my third year of studying Computer Science at International University in Thu Duc District.</p>
-        <p class="paragraph">Best description about me are Creative, Sociable and Progressive.</p>  
-        <p class="paragraph">I am looking for an internship position in the Software Engineering field in which I can put into practice my knowledge and experience,ultimately benefiting the operations of the organisation that I work for.</p>  
-        <p class="paragraph"> </p> 
-
+    <div class="line"></div>
+    <div id="container" class="container">
+      <div class="header">
+        <div>
+          <h1>Tu Phan</h1>
+          <h2>Web Developer</h2>
+        </div>
       </div>
-
-      <div id="separator" ></div>
-      
-      <div id="right-intro">
-
-        <p class="header-paragraph" style="margin-top: 0px;">EDUCATION</p>
-        <p class="paragraph" style='font-weight: 600;'>Computer Science at International University</p>
-        <p class="paragraph">2018 - 2022</p>
-
-        <p class="header-paragraph">SKILLS</p>
-
-        <div class="skill-card">
-          <img class="skill-image" src="./js.png"  >
-          <div class='skill-score'>
-            <div class="score" id="js-skill"  > </div>
-            <div class="unscore"> </div>
+      <div class="header">
+        <img src="./assets/avatar.png" class="avatar" />
+      </div>
+      <div class="thin-line"></div>
+      <div class="thin-line"></div>
+      <div id="left-col" class="left-col"></div>
+      <div id="right-col" class="right-col">
+        <div id="right-col__content"></div>
+        <div class="right-col__content">
+          <p class="right-content__tittle">Social</p>
+          <div class="social">
+            <img class="social__icon" src="/assets/linkedin.png" />
+            <a
+              class="social__text"
+              target="_blank"
+              href="https://linkedin.com/in/tu-phan-06032000"
+              >linkedin.com/in/tu-phan-06032000</a
+            >
+          </div>
+          <div class="social">
+            <img class="social__icon" src="/assets/github.png" />
+            <a
+              class="social__text"
+              target="_blank"
+              href="https://github.com/tusphananh"
+              >github.com/tusphananh</a
+            >
           </div>
         </div>
-
-        <div class="skill-card">
-          <img class="skill-image" src="./java.png"   >
-          <div class='skill-score'>
-            <div class="score" id="java-skill"> </div>
-            <div class="unscore"> </div>
-          </div>
-        </div>
-        
-        <div class="skill-card">
-          <img class="skill-image" src="./python.png" >
-          <div class='skill-score'>
-            <div class="score" id="python-skill" > </div>
-            <div class="unscore"> </div>
-          </div>
-        </div>
-        
-
-        <p class="header-paragraph">CONTACT</p>
-       
-        <div class="contact-container">
-      
-          <img class="contact-image" src="./facebook.png" onclick="window.open('https://www.facebook.com/profile.php?id=100006280300443', '_blank'); " alt="" >
-          <img class="contact-image" src="./github.png" onclick="window.open('https://github.com/tusphananh', '_blank'); " alt="">
-          <img class="contact-image" src="./linkedin.png" onclick="window.open('https://www.linkedin.com/in/tu-phan-4387491b2/', '_blank'); " alt="">
-        </div>
-        
-        <div class="contact-container" style="margin-top:20px">
-          <p class="paragraph" style='font-weight: 600; margin-right: 5px;' >Gmail: </p>
-          <p class="paragraph" > tus.phananh@gmail.com</p>
-          
-        </div>
-        <div class="contact-container">
-          <p class="paragraph" style='font-weight: 600;margin-right: 5px;'>Phone: </p>
-          <p class="paragraph"> +84932059267</p></div>
-        </div>
+      </div>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
