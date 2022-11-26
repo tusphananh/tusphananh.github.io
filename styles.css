@@ -6,6 +6,11 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  max-width: 1000px;
+  /* shadow left and right */
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .line {
@@ -36,8 +41,8 @@ body {
 }
 
 .avatar {
-  width: 82px;
-  height: 82px;
+  width: 92px;
+  height: 92px;
   border-radius: 100%;
   border: 4px solid #dcdcdc;
 }
@@ -186,6 +191,15 @@ body {
       "thinLine thinLine"
       "leftCol leftCol"
       "thinLineDisplay thinLineDisplay"
-      "rightCol rightCol";
+      "rightCol rightCol"
+      "socialCol socialCol";
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .social-col {
+    display: flex;
+    flex-direction: column;
+    grid-area: socialCol;
   }
 }
