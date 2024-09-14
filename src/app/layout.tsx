@@ -3,6 +3,7 @@ import './globals.css';
 import { ThemeProvider } from '@/components/common/theme-provider';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import { twMerge } from 'tailwind-merge';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -28,7 +29,9 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={twMerge(
+          `${geistSans.variable} ${geistMono.variable} antialiased`
+        )}
       >
         <ThemeProvider
           attribute='class'
