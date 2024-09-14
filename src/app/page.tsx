@@ -17,7 +17,7 @@ export default function Component() {
       <main className='flex flex-1 flex-col items-center gap-12 py-32'>
         <div className='relative flex h-96 w-full flex-col items-center justify-center gap-12'>
           <span className='pointer-events-none w-full whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10'>
-            NADA Design
+            TUSPHANANH
           </span>
           <WordRotate
             className='text-4xl font-bold text-black dark:text-white'
