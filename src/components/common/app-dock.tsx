@@ -11,6 +11,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
+import { AppRoute, CommonInfo } from '@/constants';
 import { cn } from '@/lib/utils';
 import { ModeToggle } from './mode-toggle';
 
@@ -58,24 +59,37 @@ const Icons = {
       ></path>
     </svg>
   ),
+  facebook: (props: IconProps) => (
+    <svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' {...props}>
+      <path
+        fill='currentColor'
+        d='M20.5 0H3.5C1.57 0 0 1.57 0 3.5v17c0 1.93 1.57 3.5 3.5 3.5h9.5v-9h-2v-3h2v-1.5c0-2.21 1.79-4 4-4h2v3h-2c-.55 0-1 .45-1 1V14h3l-.5 3h-2v9h4.5c1.93 0 3.5-1.57 3.5-3.5v-17c0-1.93-1.57-3.5-3.5-3.5Z'
+      />
+    </svg>
+  ),
 };
 
 const DATA = {
   navbar: [
-    { href: '#', icon: HomeIcon, label: 'Home' },
-    { href: '#', icon: PencilIcon, label: 'Blog' },
+    { href: AppRoute.HOME, icon: HomeIcon, label: 'Home' },
+    { href: AppRoute.BLOGS, icon: PencilIcon, label: 'Blog' },
   ],
   contact: {
     social: {
       LinkedIn: {
         name: 'LinkedIn',
-        url: '#',
+        url: CommonInfo.linkedin,
         icon: Icons.linkedin,
       },
       email: {
         name: 'Send Email',
-        url: '#',
+        url: `mailto:${CommonInfo.email}`,
         icon: Icons.email,
+      },
+      facebook: {
+        name: 'Facebook',
+        url: CommonInfo.facebook,
+        icon: Icons.facebook,
       },
     },
   },
@@ -112,6 +126,7 @@ export function AppDock() {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Link
+                    target='_blank'
                     href={social.url}
                     className={cn(
                       buttonVariants({ variant: 'ghost', size: 'icon' }),

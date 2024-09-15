@@ -1,5 +1,7 @@
+import Footer from '@/components/common/footer';
 import './globals.css';
 
+import { AppDock } from '@/components/common/app-dock';
 import { ThemeProvider } from '@/components/common/theme-provider';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
@@ -39,7 +41,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <AppDock />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

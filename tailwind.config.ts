@@ -59,6 +59,10 @@ const config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       keyframes: {
+        wave: {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '50%': { transform: 'rotate(15deg)' },
+        },
         orbit: {
           '0%': {
             transform:
@@ -85,8 +89,27 @@ const config = {
           from: { transform: 'translateY(0)' },
           to: { transform: 'translateY(calc(-100% - var(--gap)))' },
         },
+        meteor: {
+          '0%': { transform: 'rotate(215deg) translateX(0)', opacity: '1' },
+          '70%': { opacity: '1' },
+          '100%': {
+            transform: 'rotate(215deg) translateX(-500px)',
+            opacity: '0',
+          },
+        },
+        shimmer: {
+          '0%, 90%, 100%': {
+            'background-position': 'calc(-100% - var(--shimmer-width)) 0',
+          },
+          '30%, 60%': {
+            'background-position': 'calc(100% + var(--shimmer-width)) 0',
+          },
+        },
       },
       animation: {
+        shimmer: 'shimmer 8s infinite',
+        meteor: 'meteor 5s linear infinite',
+        wave: 'wave 0.5s ease-in-out infinite',
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         marquee: 'marquee var(--duration) linear infinite',
