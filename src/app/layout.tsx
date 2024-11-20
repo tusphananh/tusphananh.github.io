@@ -3,6 +3,7 @@ import './globals.css';
 
 import { AppDock } from '@/components/common/app-dock';
 import { ThemeProvider } from '@/components/common/theme-provider';
+import { StarsBackground } from '@/components/ui/stars-background';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { twMerge } from 'tailwind-merge';
@@ -42,6 +43,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <AppDock />
+          <StarsBackground className='fixed' starDensity={0.001} />
           {children}
           <Footer />
         </ThemeProvider>

@@ -115,6 +115,7 @@ const config = {
         marquee: 'marquee var(--duration) linear infinite',
         'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
         orbit: 'orbit calc(var(--duration)*1s) linear infinite',
+        'meteor-effect': 'meteor 5s linear infinite',
       },
     },
   },

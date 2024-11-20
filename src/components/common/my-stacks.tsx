@@ -1,4 +1,12 @@
-import IconCloud from '@/components/magicui/icon-cloud';
+'use client';
+
+import { renderCustomIcon } from '@/components/magicui/icon-cloud';
+import { cn } from '@/lib/utils';
+import { useTheme } from 'next-themes';
+import { useEffect, useMemo, useState } from 'react';
+import { fetchSimpleIcons } from 'react-icon-cloud';
+import DotPattern from '../ui/dot-pattern';
+import RevealScroll from '../ui/reveal-scroll';
 
 const slugs = [
   'typescript',
@@ -23,10 +31,38 @@ const slugs = [
   'redis',
 ];
 
+type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>;
+
 export function MyStacks() {
+  const [data, setData] = useState<IconData | null>(null);
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    fetchSimpleIcons({ slugs }).then(setData);
+  }, [slugs]);
+
+  const renderedIcons = useMemo(() => {
+    if (!data) return null;
+
+    return Object.values(data.simpleIcons).map((icon) =>
+      renderCustomIcon(icon, theme || 'light')
+    );
+  }, [data, theme]);
+
+  if (!renderedIcons?.length) {
+    return null;
+  }
+
   return (
-    <div className='max-w-[32rem]'>
-      <IconCloud iconSlugs={slugs} />
-    </div>
+    <RevealScroll
+      items={renderedIcons}
+      background={
+        <DotPattern
+          className={cn(
+            '[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]'
+          )}
+        />
+      }
+    />
   );
 }
