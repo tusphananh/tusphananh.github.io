@@ -45,13 +45,32 @@ export default function Component() {
 
       <Travel />
 
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <TextReveal
+        text={'Making \n Videos 📺'}
+        textClassName='mx-auto leading-relaxed justify-center'
+      />
 
-      <div className='space-y-8 p-8'>
+      <div className='flex flex-col gap-8 p-16'>
+        <HeroVideoDialog
+          topText='Diep Son'
+          bottomText='2020'
+          className='block'
+          animationStyle='from-center'
+          videoSrc='https://www.youtube.com/embed/T3FagRLcJ54?si=2DIKK6KUHGlNIOWa'
+          thumbnailSrc='https://imagedelivery.net/4yK5HBtoBLElo88KvPkiIA/2b98fc7e-7040-43ce-82e1-acff00badc00/public'
+          thumbnailAlt='Diep Son'
+        />
+
+        <HeroVideoDialog
+          topText='Diep Son'
+          bottomText='2020'
+          className='block'
+          animationStyle='from-center'
+          videoSrc='https://www.youtube.com/embed/T3FagRLcJ54?si=2DIKK6KUHGlNIOWa'
+          thumbnailSrc='https://imagedelivery.net/4yK5HBtoBLElo88KvPkiIA/2b98fc7e-7040-43ce-82e1-acff00badc00/public'
+          thumbnailAlt='Diep Son'
+        />
+
         <HeroVideoDialog
           topText='Diep Son'
           bottomText='2020'
@@ -62,6 +81,11 @@ export default function Component() {
           thumbnailAlt='Diep Son'
         />
       </div>
+
+      <TextReveal
+        text={'Thank you'}
+        textClassName='mx-auto leading-relaxed justify-center'
+      />
     </>
   );
 }
