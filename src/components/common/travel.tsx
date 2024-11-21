@@ -40,14 +40,16 @@ const travels = [
 
 export default function Travel() {
   return (
-    <Timeline
-      data={travels.map((item) => {
-        return {
-          title: item.title,
-          content: <TravelCard key={item.title} {...item} />,
-        };
-      })}
-    />
+    <div className='mx-auto h-fit max-w-2xl'>
+      <Timeline
+        data={travels.map((item) => {
+          return {
+            title: item.title,
+            content: <TravelCard key={item.title} {...item} />,
+          };
+        })}
+      />
+    </div>
   );
 }
 
