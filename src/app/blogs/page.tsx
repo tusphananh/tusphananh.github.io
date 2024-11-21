@@ -1,3 +1,5 @@
+import Blogs from '@/components/common/blogs';
+
 export default function BlogsPages() {
   return (
     <div className='min-safe-area'>
@@ -7,6 +9,7 @@ export default function BlogsPages() {
           I&apos;m a software engineer, I love to write blogs about technology,
           programming, and my life.
         </p>
+        <Blogs />
       </div>
     </div>
   );

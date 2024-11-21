@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer
       id='contact'
-      className='flex w-full shrink-0 flex-col items-center justify-center gap-8 border-t px-4 py-6 sm:flex-row md:px-6'
+      className='flex w-full shrink-0 flex-col items-center justify-center gap-8 border-t bg-gray-100/60 px-4 py-6 backdrop-blur-xl dark:bg-gray-800/30 sm:flex-row md:px-6'
     >
       <Link
         className='text-xs text-gray-500 underline-offset-4 hover:underline'

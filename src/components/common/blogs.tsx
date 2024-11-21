@@ -1,40 +1,40 @@
 'use client';
-import { Meteors } from '../ui/meteors';
+import useCloudIcons from '@/hooks/useCloudIcons';
+import { AuroraBackground } from '../ui/aurora-background';
 
 interface IBlogCardProps {
   name: string;
   description: string;
   link: string;
-  image: string;
+  logos?: string[];
 }
 
 const blogs = [
   {
     name: 'React Best Practices',
-    description: 'Learn the best practices of React.',
+    description:
+      'After years of experience, I have gathered the best practices of React.',
     link: 'https://tusphananh.gitbook.io/best-practices',
-    image:
-      'https://plus.unsplash.com/premium_photo-1661339265887-be15949790ff?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    logos: ['react', 'typescript', 'nextdotjs'],
   },
   {
     name: 'Nest Best Practices',
-    description: 'Nest the best practices of React.',
-    link: 'https://tusphananh.gitbook.io/best-practices',
-    image:
-      'https://plus.unsplash.com/premium_photo-1661339265887-be15949790ff?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    description:
+      'After years of experience, I have gathered the best practices of NestJS.',
+    link: 'https://tusphananh.gitbook.io/best-practices/nestjs/nestjs-common-interfaces',
+    logos: ['nestjs', 'typescript', 'nodedotjs'],
   },
   {
     name: 'My VSCode Extensions',
-    description: 'My favorite VSCode extensions.',
-    link: 'https://tusphananh.gitbook.io/best-practices',
-    image:
-      'https://plus.unsplash.com/premium_photo-1661339265887-be15949790ff?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    description: 'To be productive, you need the right tools. Here are mine.',
+    link: 'https://tusphananh.gitbook.io/best-practices/vs-code/my-vs-code-extensions',
+    logos: ['prettier', 'typescript', 'react', 'javascript', 'eslint'],
   },
 ];
 
 export default function Blogs() {
   return (
-    <div className='mx-auto flex max-w-screen-lg flex-wrap items-center justify-center gap-8 px-8'>
+    <div className='mx-auto grid max-w-screen-xl gap-8 gap-y-12 p-8 lg:grid-cols-2 xl:grid-cols-3'>
       {blogs.map((blog) => (
         <BlogCard key={blog.name} {...blog} />
       ))}
@@ -43,53 +43,32 @@ export default function Blogs() {
 }
 
 export function BlogCard(props: IBlogCardProps) {
-  const { name, description, link, image } = props;
-  return (
-    <div className=''>
-      <div className='relative w-full min-w-96 max-w-xs'>
-        <div className='absolute inset-0 h-full w-full scale-[0.80] transform rounded-full bg-red-500 bg-gradient-to-r from-blue-500 to-teal-500 blur-3xl' />
-        <div className='relative flex h-full flex-col items-start justify-end overflow-hidden rounded-2xl border border-gray-800 bg-gray-900 px-4 py-8 shadow-xl'>
-          <div className='mb-4 flex h-5 w-5 items-center justify-center rounded-full border border-gray-500'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              fill='none'
-              viewBox='0 0 24 24'
-              strokeWidth='1.5'
-              stroke='currentColor'
-              className='h-2 w-2 text-gray-300'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                d='M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25'
-              />
-            </svg>
-          </div>
+  const { name, description, link, logos } = props;
 
-          <h1 className='relative z-50 mb-4 text-xl font-bold text-white'>
+  const renderedIcons = useCloudIcons(logos, { size: 24 });
+
+  return (
+    <div className='relative flex w-full items-center justify-center'>
+      <div className='supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 relative flex h-full max-w-md flex-col items-start justify-end overflow-hidden rounded-2xl border bg-gray-100/60 px-4 py-8 shadow-xl backdrop-blur-xl dark:border-gray-800/60 dark:bg-gray-800/30'>
+        <AuroraBackground className='h-48 w-full overflow-hidden rounded-lg p-4'>
+          <div className='mr-auto flex flex-wrap gap-4'>
+            {renderedIcons?.map((icon) => icon)}
+          </div>
+          <h1 className='relative z-50 mb-4 mr-auto mt-auto text-wrap text-2xl font-bold opacity-80 dark:text-white'>
             {name}
           </h1>
+        </AuroraBackground>
 
-          <p className='relative z-50 mb-4 text-base font-normal text-slate-500'>
-            {description}
-          </p>
-
-          <img
-            src={image}
-            alt={name}
-            className='mb-8 h-48 w-full rounded-lg object-cover'
-          />
-          <a
-            className='rounded-lg border border-gray-500 px-4 py-1 text-gray-300'
-            href={link}
-            target='_blank'
-          >
-            Explore
-          </a>
-
-          {/* Meaty part - Meteor effect */}
-          <Meteors number={20} />
-        </div>
+        <p className='relative z-50 my-4 text-wrap text-base font-normal text-gray-600 dark:text-slate-300'>
+          {description}
+        </p>
+        <a
+          className='rounded-lg border border-gray-500 px-4 py-1 dark:text-gray-300'
+          href={link}
+          target='_blank'
+        >
+          Read more
+        </a>
       </div>
     </div>
   );
