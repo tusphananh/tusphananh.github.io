@@ -1,5 +1,7 @@
 import { cn } from '@/lib/utils';
+import PreviewItemDialog from '../ui/preview-item';
 import { Timeline } from '../ui/timeline';
+import DynamicImage from './dynamic-image';
 
 const id = '4yK5HBtoBLElo88KvPkiIA';
 const travels = [
@@ -72,20 +74,39 @@ const TravelCard = ({ images, title, description }: ITravelCard) => {
       )}
     >
       <div className='flex flex-row items-center gap-2'>
-        <p className='text-xs font-medium text-gray-500 dark:text-white/80'>
+        <p className='text-sm font-medium text-gray-500 dark:text-white/60 md:text-base'>
           {description}
         </p>
       </div>
 
-      <div className='mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={'https://imagedelivery.net/' + id + '/' + image + '/public'}
-            alt={title}
-            className='h-full w-full rounded-xl object-cover'
-          />
-        ))}
+      <div className='mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2'>
+        {images.map((image, index) => {
+          const url =
+            'https://imagedelivery.net/' + id + '/' + image + '/public';
+          return (
+            <PreviewItemDialog
+              trigger={
+                <DynamicImage
+                  width={900}
+                  height={900}
+                  src={url}
+                  alt={title}
+                  className='size-full overflow-hidden rounded-xl'
+                  imageClassName='object-cover'
+                />
+              }
+            >
+              <DynamicImage
+                width={1920}
+                height={1080}
+                src={url}
+                alt={title}
+                className='m-auto size-fit max-h-full max-w-full overflow-hidden rounded-xl'
+                imageClassName='object-contain'
+              />
+            </PreviewItemDialog>
+          );
+        })}
       </div>
     </figure>
   );

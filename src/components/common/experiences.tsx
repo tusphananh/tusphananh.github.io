@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { cn } from '@/lib/utils';
 import { Timeline } from '../ui/timeline';
+import TypingAnimation from '../ui/typing-animation';
 
 interface IWorkingHistory {
   img: string;
@@ -57,7 +58,7 @@ const WorkingHistory = ({
       className={cn(
         'relative w-full cursor-pointer overflow-hidden rounded-xl border p-4',
         // light styles
-        'border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]',
+        'border-gray-950/[.1] bg-white/60 hover:bg-gray-950/[.05]',
         // dark styles
         'dark:border-gray-50/[.1] dark:bg-gray-500/10 dark:hover:bg-gray-300/10',
         'supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 backdrop-blur-md'
@@ -81,7 +82,11 @@ const WorkingHistory = ({
         </div>
       </div>
       <blockquote className='mt-2 text-sm dark:text-white/80'>
-        {body}
+        <TypingAnimation
+          text={body}
+          className='text-left text-sm font-normal dark:text-white/70'
+          duration={10}
+        />
       </blockquote>
 
       {/* Achievements */}
@@ -89,7 +94,11 @@ const WorkingHistory = ({
       <ul className='mt-4 space-y-2'>
         {achievements?.map((achievement, index) => (
           <li key={index} className='text-xs dark:text-white/70'>
-            🚀&nbsp;{achievement}
+            <TypingAnimation
+              text={`🚀 ${achievement}`}
+              className='text-left text-xs font-normal text-gray-600 dark:text-white/70'
+              duration={50}
+            />
           </li>
         ))}
       </ul>
