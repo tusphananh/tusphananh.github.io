@@ -85,8 +85,10 @@ const TravelCard = ({ images, title, description }: ITravelCard) => {
             'https://imagedelivery.net/' + id + '/' + image + '/public';
           return (
             <PreviewItemDialog
+              key={'preview-dialog-' + index}
               trigger={
                 <DynamicImage
+                  key={'trigger-' + index}
                   width={900}
                   height={900}
                   src={url}
@@ -97,6 +99,7 @@ const TravelCard = ({ images, title, description }: ITravelCard) => {
               }
             >
               <DynamicImage
+                key={'preview-' + index}
                 width={1920}
                 height={1080}
                 src={url}

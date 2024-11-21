@@ -1,9 +1,8 @@
 'use client';
 
-import { AnimatePresence, motion } from 'framer-motion';
-import { useState } from 'react';
-
 import { cn } from '@/lib/utils';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 type AnimationStyle =
@@ -74,6 +73,16 @@ export default function PreviewItemDialog({
 }: PreviewItemProps) {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const selectedAnimation = animationVariants[animationStyle];
+
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <div className={cn('relative', className)}>
