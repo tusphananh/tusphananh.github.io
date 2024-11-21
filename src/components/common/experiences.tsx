@@ -1,4 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
+'use client';
+
+import useInView from '@/hooks/useInView';
 import { cn } from '@/lib/utils';
 import { Timeline } from '../ui/timeline';
 import TypingAnimation from '../ui/typing-animation';
@@ -53,8 +56,12 @@ const WorkingHistory = ({
   title,
   achievements,
 }: IWorkingHistory) => {
+  const [ref, isInView] = useInView({
+    disableRecheck: true,
+  });
   return (
     <figure
+      ref={ref}
       className={cn(
         'relative w-full cursor-pointer overflow-hidden rounded-xl border p-4',
         // light styles
@@ -82,11 +89,13 @@ const WorkingHistory = ({
         </div>
       </div>
       <blockquote className='mt-2 text-sm dark:text-white/80'>
-        <TypingAnimation
-          text={body}
-          className='text-left text-sm font-normal dark:text-white/70'
-          duration={10}
-        />
+        {isInView && (
+          <TypingAnimation
+            text={body}
+            className='text-left text-sm font-normal dark:text-white/70'
+            duration={10}
+          />
+        )}
       </blockquote>
 
       {/* Achievements */}
@@ -94,11 +103,13 @@ const WorkingHistory = ({
       <ul className='mt-4 space-y-2'>
         {achievements?.map((achievement, index) => (
           <li key={index} className='text-xs dark:text-white/70'>
-            <TypingAnimation
-              text={`🚀 ${achievement}`}
-              className='text-left text-xs font-normal text-gray-600 dark:text-white/70'
-              duration={50}
-            />
+            {isInView && (
+              <TypingAnimation
+                text={`🚀 ${achievement}`}
+                className='text-left text-xs font-normal text-gray-600 dark:text-white/70'
+                duration={50}
+              />
+            )}
           </li>
         ))}
       </ul>

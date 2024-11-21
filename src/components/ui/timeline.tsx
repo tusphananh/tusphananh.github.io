@@ -1,6 +1,7 @@
 'use client';
+import useResizeObserver from '@/hooks/useResizeObserver';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 
 interface TimelineEntry {
   title: string;
@@ -8,23 +9,19 @@ interface TimelineEntry {
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
-  const ref = useRef<HTMLDivElement>(null);
+  const [ref, size] = useResizeObserver<HTMLDivElement>();
   const containerRef = useRef<HTMLDivElement>(null);
-  const [height, setHeight] = useState(0);
-
-  useEffect(() => {
-    if (ref.current) {
-      const rect = ref.current.getBoundingClientRect();
-      setHeight(rect.height);
-    }
-  }, [ref]);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start 10%', 'end 50%'],
   });
 
-  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
+  const heightTransform = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, size.height]
+  );
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
@@ -45,13 +42,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <h3 className='mb-4 block text-left text-2xl font-bold text-neutral-800 dark:text-neutral-100/80'>
                 {item.title}
               </h3>
-              {item.content}{' '}
+              {item.content}
             </div>
           </div>
         ))}
         <div
           style={{
-            height: height + 'px',
+            height: size.height + 'px',
           }}
           className='absolute left-6 top-0 w-[2px] overflow-hidden bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] dark:via-neutral-700 md:left-8'
         >

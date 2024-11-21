@@ -42,7 +42,7 @@ const travels = [
 
 export default function Travel() {
   return (
-    <div className='mx-auto h-fit max-w-2xl'>
+    <div className='mx-auto h-fit max-w-screen-lg'>
       <Timeline
         data={travels.map((item) => {
           return {
@@ -93,7 +93,7 @@ const TravelCard = ({ images, title, description }: ITravelCard) => {
                   height={900}
                   src={url}
                   alt={title}
-                  className='size-full overflow-hidden rounded-xl'
+                  className='size-full overflow-hidden rounded-xl sm:max-h-72'
                   imageClassName='object-cover'
                 />
               }
