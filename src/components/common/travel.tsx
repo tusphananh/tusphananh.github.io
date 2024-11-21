@@ -7,8 +7,7 @@ const id = '4yK5HBtoBLElo88KvPkiIA';
 const travels = [
   {
     title: '🇺🇸 United State',
-    description:
-      'Remarkable onsite trip in the US for 1 month. Atlanta is a beautiful city with cold weather. I moved here to collaborate with the other teams to design new system for our upcoming features.',
+    description: `Completed a strategic one-month onsite engagement in Atlanta, USA, collaborating directly with cross-functional teams to architect and design system infrastructure for upcoming product initiatives. This immersive experience not only facilitated seamless team integration but also enabled effective knowledge transfer and alignment on critical system design decisions.`,
     images: [
       '9cebe955-0951-474f-fa3e-9679afd10e00',
       'c27fcf00-886b-4e40-c3f3-e3a2f30a0800',
@@ -18,8 +17,7 @@ const travels = [
   },
   {
     title: '🇰🇷 Korea',
-    description:
-      'Watching K-drama was urged me to visit Korea. I went to Seoul to prove that it is also amazing as movie.',
+    description: `Inspired by Korean cultural media, I embarked on an enriching journey to Seoul, where I experienced firsthand the captivating blend of tradition and modernity that makes the city truly remarkable. The immersive experience validated the authentic portrayal of Korean culture and urban lifestyle depicted in contemporary media.`,
     images: [
       '26f09768-a51b-44f0-8bbf-286ae6716a00',
       '8cabba96-89b3-4941-d52a-7a68b4afa900',
@@ -29,8 +27,7 @@ const travels = [
   },
   {
     title: '🇹🇭 Thailand',
-    description:
-      'Amazing trip in Thailand, our journey from Bangkok to Chiang Mai then Ban Rak Thai. It took us 9 hours from Bangkok to Chiang Mai and 6 hours to Ban Rak Thai.',
+    description: `Embarked on an extraordinary cross-country expedition through Thailand, traversing from the vibrant metropolis of Bangkok to the cultural hub of Chiang Mai, and ultimately reaching the serene Ban Rak Thai. This comprehensive journey encompassed diverse landscapes and cultural experiences, spanning a 9-hour trek to Chiang Mai followed by a 6-hour venture to the picturesque Ban Rak Thai village.`,
     images: [
       '40c6b0ea-b0ca-4f53-5df6-4343fbfbbd00',
       '7f30018f-3d6f-4d77-3e33-b1c093127200',

@@ -20,7 +20,8 @@ const workingHistory: IWorkingHistory[] = [
     name: 'NAB Innovation Center',
     duration: '2024',
     title: 'Software Engineer',
-    body: 'Working in Global Engineering has been a great experience. I have learned a lot and met some amazing people. Collaborating with multiple micro-services and micro-frontend is not only great but also significant betterment in career path.',
+    body: `Being part of Global Engineering has been a pivotal milestone in my career journey. 
+    The opportunity to architect and integrate multiple microservices while implementing micro-frontend solutions has enhanced both my technical capabilities and collaborative skills. Working alongside exceptional professionals in this dynamic environment has not only broadened my expertise but has also positioned me for continued growth in modern software development.`,
     img: 'https://rebrand.com/wp-content/uploads/2023/07/NAB-Star-Logo-On-black-Thumbnail-7-5-2023.png',
     achievements: [
       'Applied Graphql codegen to generate typescript types for graphql queries and mutations',
@@ -31,7 +32,7 @@ const workingHistory: IWorkingHistory[] = [
     name: 'FPT Software',
     duration: '2022',
     title: 'Software Engineer',
-    body: 'Intensive working with multiple teams both in Vietnam and US. In charge of designing and implementing new features with AWS, React, and NodeJS. Also, building in-house React Libraries with TurboRepo.',
+    body: `Led cross-cultural development initiatives across Vietnam and US teams, spearheading the architecture and implementation of features leveraging AWS, React, and Node.js ecosystem. Pioneered the development of scalable in-house React component libraries using TurboRepo, enabling efficient mono-repo management and streamlined development workflows.`,
     img: 'https://fptsoftware.com/-/media/project/fpt-software/fso/uplift/logo-fpt.png?modified=20241017090751',
     achievements: [
       "2022's Top performer",
@@ -43,7 +44,7 @@ const workingHistory: IWorkingHistory[] = [
     name: 'Gcalls',
     duration: '2021',
     title: 'Intern Fullstack Developer',
-    body: 'Full experience with React, NodeJS, and MongoDB. Worked on building a new SDK for Mobile and Web. Set up CI/CD, Nginx, and Docker for Microservices. Implemented ELK stacks to monitor system.',
+    body: `Architected and delivered full-stack solutions utilizing React, Node.js, and MongoDB, while spearheading the development of a cross-platform SDK for mobile and web applications. Established robust DevOps infrastructure by implementing CI/CD pipelines, Nginx configurations, and containerized microservices using Docker. Enhanced system observability through the implementation of ELK (Elasticsearch, Logstash, Kibana) stack for comprehensive monitoring and log analytics.`,
     img: 'https://khoinghiepvietnam.org/wp-content/uploads/2018/03/gcall-logo.png',
     achievements: ['Successfully built SDK for Mobile and Web'],
   },
