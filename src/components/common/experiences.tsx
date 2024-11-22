@@ -2,7 +2,7 @@
 'use client';
 
 import useInView from '@/hooks/useInView';
-import { cn } from '@/lib/utils';
+import GlassCard from '../ui/glass-card';
 import { Timeline } from '../ui/timeline';
 import TypingAnimation from '../ui/typing-animation';
 
@@ -50,6 +50,19 @@ const workingHistory: IWorkingHistory[] = [
   },
 ];
 
+export function Experiences() {
+  return (
+    <div className='mx-auto h-fit max-w-2xl'>
+      <Timeline
+        data={workingHistory.map((work) => ({
+          title: work.duration,
+          content: <WorkingHistory key={work.duration} {...work} />,
+        }))}
+      />
+    </div>
+  );
+}
+
 const WorkingHistory = ({
   img,
   name,
@@ -61,17 +74,7 @@ const WorkingHistory = ({
     disableRecheck: true,
   });
   return (
-    <figure
-      ref={ref}
-      className={cn(
-        'relative w-full cursor-pointer overflow-hidden rounded-xl border p-4',
-        // light styles
-        'border-gray-950/[.1] bg-white/60 hover:bg-gray-950/[.05]',
-        // dark styles
-        'dark:border-gray-50/[.1] dark:bg-gray-500/10 dark:hover:bg-gray-300/10',
-        'supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 backdrop-blur-md'
-      )}
-    >
+    <GlassCard ref={ref}>
       <div className='flex flex-row items-center gap-2'>
         <img
           className='h-10 w-10 rounded-full bg-gray-200 object-cover dark:bg-black'
@@ -114,19 +117,6 @@ const WorkingHistory = ({
           </li>
         ))}
       </ul>
-    </figure>
+    </GlassCard>
   );
 };
-
-export function Experiences() {
-  return (
-    <div className='mx-auto h-fit max-w-2xl'>
-      <Timeline
-        data={workingHistory.map((work) => ({
-          title: work.duration,
-          content: <WorkingHistory key={work.duration} {...work} />,
-        }))}
-      />
-    </div>
-  );
-}

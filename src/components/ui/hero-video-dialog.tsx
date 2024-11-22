@@ -24,6 +24,8 @@ interface HeroVideoProps {
   className?: string;
   topText?: string;
   bottomText?: string;
+  topTextClassName?: string;
+  bottomTextClassName?: string;
 }
 
 const animationVariants = {
@@ -77,6 +79,8 @@ export default function HeroVideoDialog({
   className,
   topText,
   bottomText,
+  topTextClassName,
+  bottomTextClassName,
 }: HeroVideoProps) {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const selectedAnimation = animationVariants[animationStyle];
@@ -99,7 +103,12 @@ export default function HeroVideoDialog({
             <div
               className={`relative flex scale-100 items-center justify-center transition-all duration-200 ease-out group-hover:scale-[1.2]`}
             >
-              <h1 className='text-2xl font-black text-white opacity-80 md:text-8xl'>
+              <h1
+                className={cn(
+                  'text-2xl font-black text-white opacity-80 md:text-8xl',
+                  topTextClassName
+                )}
+              >
                 {topText}
               </h1>
             </div>
@@ -125,7 +134,12 @@ export default function HeroVideoDialog({
             <div
               className={`relative flex scale-100 items-center justify-center transition-all duration-200 ease-out group-hover:scale-[1.2]`}
             >
-              <h1 className='text-2xl font-black text-white opacity-80 md:text-8xl'>
+              <h1
+                className={cn(
+                  'text-2xl font-black text-white opacity-80 md:text-8xl',
+                  bottomTextClassName
+                )}
+              >
                 {bottomText}
               </h1>
             </div>

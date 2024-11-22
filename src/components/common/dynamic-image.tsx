@@ -32,19 +32,29 @@ function DynamicImage(props: IDynamicImageProps) {
 
   const url = getCustomCloudflareUrl(src, { width, height });
   const blurUrl = getCustomCloudflareUrl(src, { width, height, blur: 250 });
+  const commonImgClasses = twMerge(
+    'h-full w-full object-cover rounded-xl object-cover',
+    disableDrag && 'pointer-events-none',
+    imageClassName
+  );
 
   return (
     <figure className={twMerge('h-full w-full', className)}>
       <div
         onClick={onClick}
         className={twMerge(
-          'h-full w-full',
+          'relative flex h-full max-h-full w-full max-w-full items-center justify-center',
           circle && 'overflow-hidden rounded-full'
         )}
-        style={{
-          backgroundImage: `url(${blurUrl})`,
-        }}
       >
+        <img
+          loading='lazy'
+          width={width}
+          height={height}
+          alt={`${alt}-blur-image`}
+          src={blurUrl}
+          className={commonImgClasses}
+        />
         <img
           loading='lazy'
           width={width}
@@ -52,9 +62,8 @@ function DynamicImage(props: IDynamicImageProps) {
           alt={alt}
           src={url}
           className={twMerge(
-            'h-full w-full object-cover',
-            disableDrag && 'pointer-events-none',
-            imageClassName
+            'absolute bottom-0 left-0 right-0 top-0 m-auto',
+            commonImgClasses
           )}
         />
       </div>

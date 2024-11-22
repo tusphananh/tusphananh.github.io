@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import GlassCard from '../ui/glass-card';
 import PreviewItemDialog from '../ui/preview-item';
 import { Timeline } from '../ui/timeline';
 import DynamicImage from './dynamic-image';
@@ -60,16 +60,7 @@ interface ITravelCard {
 
 const TravelCard = ({ images, title, description }: ITravelCard) => {
   return (
-    <figure
-      className={cn(
-        'relative w-full cursor-pointer overflow-hidden rounded-xl border p-4',
-        // light styles
-        'border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]',
-        // dark styles
-        'dark:border-gray-50/[.1] dark:bg-gray-500/10 dark:hover:bg-gray-300/10',
-        'supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 backdrop-blur-md'
-      )}
-    >
+    <GlassCard>
       <div className='flex flex-row items-center gap-2'>
         <p className='text-sm font-medium text-gray-500 dark:text-white/60 md:text-base'>
           {description}
@@ -90,7 +81,7 @@ const TravelCard = ({ images, title, description }: ITravelCard) => {
                   height={900}
                   src={url}
                   alt={title}
-                  className='size-full overflow-hidden rounded-xl sm:max-h-72'
+                  className='size-full overflow-hidden sm:max-h-72'
                   imageClassName='object-cover'
                 />
               }
@@ -101,13 +92,13 @@ const TravelCard = ({ images, title, description }: ITravelCard) => {
                 height={1080}
                 src={url}
                 alt={title}
-                className='m-auto size-fit max-h-full max-w-full overflow-hidden rounded-xl'
-                imageClassName='object-contain'
+                className='m-auto max-h-full max-w-full overflow-hidden'
+                imageClassName='object-cover w-auto h-auto max-h-full max-w-full rounded-xl'
               />
             </PreviewItemDialog>
           );
         })}
       </div>
-    </figure>
+    </GlassCard>
   );
 };
