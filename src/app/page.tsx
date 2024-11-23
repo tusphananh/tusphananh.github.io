@@ -12,7 +12,12 @@ export default function Component() {
       <TextReveal
         text={'I am \n Tu Phan'}
         textClassName='mx-auto leading-relaxed justify-center'
-      />
+      >
+        <img
+          src='/avatar.png'
+          className='md: mx-auto -mt-8 size-32 md:size-52'
+        />
+      </TextReveal>
       <TextReveal
         text={'Software \n Engineer \n 👨‍💻'}
         textClassName='mx-auto leading-relaxed justify-center'

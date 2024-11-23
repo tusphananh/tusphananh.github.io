@@ -9,12 +9,14 @@ interface TextRevealByWordProps {
   text: string;
   className?: string;
   textClassName?: string;
+  children?: ReactNode;
 }
 
 export const TextRevealByWord: FC<TextRevealByWordProps> = ({
   text,
   className,
   textClassName,
+  children,
 }) => {
   const targetRef = useRef<HTMLDivElement | null>(null);
 
@@ -27,7 +29,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
     <div ref={targetRef} className={cn('relative z-0 h-[200vh]', className)}>
       <div
         className={
-          'sticky top-0 mx-auto flex h-[50%] max-w-4xl items-center bg-transparent px-[1rem] py-[5rem]'
+          'sticky top-0 mx-auto flex h-[50%] max-w-4xl flex-col items-center justify-center bg-transparent px-[1rem] py-[5rem]'
         }
       >
         <div
@@ -50,6 +52,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
             );
           })}
         </div>
+        {children}
       </div>
     </div>
   );
