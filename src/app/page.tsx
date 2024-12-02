@@ -1,5 +1,6 @@
 import Blogs from '@/components/common/blogs';
 import { Experiences } from '@/components/common/experiences';
+import LinkedInCard from '@/components/common/linkedin-card';
 import MakingVideos from '@/components/common/making-videos';
 import { MyStacks } from '@/components/common/my-stacks';
 import Travel from '@/components/common/travel';
@@ -35,6 +36,13 @@ export default function Component() {
       />
 
       <Experiences />
+
+      <TextReveal
+        text={'Projects'}
+        textClassName='mx-auto leading-relaxed justify-center'
+      />
+
+      <LinkedInCard />
 
       <TextReveal
         text={'Blogs'}
