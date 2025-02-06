@@ -1,7 +1,7 @@
 import Blogs from '@/components/common/blogs';
 import { Experiences } from '@/components/common/experiences';
-import LinkedInCard from '@/components/common/linkedin-card';
 import MakingVideos from '@/components/common/making-videos';
+import MyProduct from '@/components/common/my-products';
 import { MyStacks } from '@/components/common/my-stacks';
 import Travel from '@/components/common/travel';
 import TextReveal from '@/components/ui/text-reveal';
@@ -42,7 +42,7 @@ export default function Component() {
         textClassName='mx-auto leading-relaxed justify-center'
       />
 
-      <LinkedInCard />
+      <MyProduct />
 
       <TextReveal
         text={'Blogs'}

@@ -44,7 +44,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <AppDock />
-          <div className='fixed z-0 h-full w-full'>
+          <div className='fixed top-0 z-0 h-full w-full'>
             <Orbiting duration={20} delay={20} radius={200} path>
               <div className='h-44 w-44 rounded-full bg-red-500/80 bg-gradient-to-r from-sky-500/80 to-teal-500/80 blur-2xl' />
             </Orbiting>
@@ -53,7 +53,7 @@ export default function RootLayout({
               <div className='h-72 w-72 rounded-full bg-red-500/80 bg-gradient-to-r from-violet-500/80 to-rose-500/80 blur-3xl' />
             </Orbiting>
           </div>
-          <StarsBackground className='fixed' starDensity={0.0003} />
+          <StarsBackground className='fixed top-0' starDensity={0.0003} />
 
           {children}
           <Footer />
