@@ -46,19 +46,17 @@ const products = [
     ),
   },
   {
-    name: 'Simplitech',
+    name: 'Tracer',
     date: 'January 2025',
     url: 'https://tracer.app',
     logo: 'https://tracer.app/logo.png',
-    images: ['./tracer.png', './tracer_2.png'],
+    images: ['./tracer_1.png', './tracer_2.png'],
     description: (
       <>
-        <p className='font-medium text-white/80'>
-          Simplitech is available now 🚀!
-        </p>
+        <p className='font-medium text-white/80'>Tracer is available now 🚀!</p>
         <p className='mb-2 mt-1 text-sm text-white/70'>
-          Free software crafted with precision. Every product always includes a
-          free tier, validated by user needs and shipped worldwide.
+          Search millions of community-reported records to check if an account
+          number is associated with scams before you transfer money.
         </p>
       </>
     ),
