@@ -28,10 +28,46 @@ const products = [
       'https://www.linkedin.com/posts/choiee_choiee-startup-demoday-activity-7239206586202644480-16-6',
   },
   {
-    name: 'Easplit',
+    name: 'Simplitech',
     date: 'January 2025',
-    url: 'https://easplit.com',
-    logo: './easplit_logo.png',
+    url: 'https://simplitech.app',
+    logo: 'https://simplitech.app/logo.png',
+    images: ['./simplitech_1.png', './simplitech_2.png'],
+    description: (
+      <>
+        <p className='font-medium text-white/80'>
+          Simplitech is available now 🚀!
+        </p>
+        <p className='mb-2 mt-1 text-sm text-white/70'>
+          Free software crafted with precision. Every product always includes a
+          free tier, validated by user needs and shipped worldwide.
+        </p>
+      </>
+    ),
+  },
+  {
+    name: 'Simplitech',
+    date: 'January 2025',
+    url: 'https://tracer.app',
+    logo: 'https://tracer.app/logo.png',
+    images: ['./tracer.png', './tracer_2.png'],
+    description: (
+      <>
+        <p className='font-medium text-white/80'>
+          Simplitech is available now 🚀!
+        </p>
+        <p className='mb-2 mt-1 text-sm text-white/70'>
+          Free software crafted with precision. Every product always includes a
+          free tier, validated by user needs and shipped worldwide.
+        </p>
+      </>
+    ),
+  },
+  {
+    name: 'Bill Split',
+    date: 'January 2025',
+    url: 'https://billsplit.simplitech.app',
+    logo: 'https://billsplit.simplitech.app/logo.png',
     images: ['./easplit_1.png', './easplit_2.png'],
     description: (
       <>
@@ -51,8 +87,8 @@ const products = [
   {
     name: 'EasyGacha',
     date: 'January 2025',
-    url: 'https://easygacha.com',
-    logo: './easygacha_logo.png',
+    url: 'https://gacha.simplitech.app',
+    logo: 'https://gacha.simplitech.app/logo.png',
     images: ['./easygacha_1.png', './easygacha_2.png'],
     description: (
       <>
