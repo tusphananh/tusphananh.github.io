@@ -49,7 +49,7 @@ const products = [
     name: 'Tracer',
     date: 'January 2025',
     url: 'https://tracer.app',
-    logo: 'https://tracer.app/logo.png',
+    logo: 'https://tracer.simplitech.app/logo.png',
     images: ['./tracer_1.png', './tracer_2.png'],
     description: (
       <>
