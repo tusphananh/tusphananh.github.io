@@ -14,10 +14,10 @@ const products = [
     ],
     description: (
       <>
-        <p className='font-medium text-white/80'>
+        <p className='font-medium text-foreground/80'>
           🌟 Exciting Times at Choiee! 🌟
         </p>
-        <p className='mb-2 mt-1 text-sm text-white/70'>
+        <p className='mb-2 mt-1 text-sm text-muted-foreground'>
           We are thrilled to introduce our product to the world and connect with
           the incredible talents in the startup ecosystem during UpYouth - Tech
           Startup Ecosystem&apos;s Demo Day.
@@ -35,10 +35,10 @@ const products = [
     images: ['./travel_planner_1.png', './travel_planner_2.png'],
     description: (
       <>
-        <p className='font-medium text-white/80'>
+        <p className='font-medium text-foreground/80'>
           Travel Planner is available now 🚀!
         </p>
-        <p className='mb-2 mt-1 text-sm text-white/70'>
+        <p className='mb-2 mt-1 text-sm text-muted-foreground'>
           Travel Planner helps you organize trips effortlessly — build
           itineraries, discover destinations, and keep every detail of your
           journey in one place.
@@ -54,10 +54,10 @@ const products = [
     images: ['./simplitech_1.png', './simplitech_2.png'],
     description: (
       <>
-        <p className='font-medium text-white/80'>
+        <p className='font-medium text-foreground/80'>
           Simplitech is available now 🚀!
         </p>
-        <p className='mb-2 mt-1 text-sm text-white/70'>
+        <p className='mb-2 mt-1 text-sm text-muted-foreground'>
           Free software crafted with precision. Every product always includes a
           free tier, validated by user needs and shipped worldwide.
         </p>
@@ -72,8 +72,8 @@ const products = [
     images: ['./tracer_1.png', './tracer_2.png'],
     description: (
       <>
-        <p className='font-medium text-white/80'>Tracer is available now 🚀!</p>
-        <p className='mb-2 mt-1 text-sm text-white/70'>
+        <p className='font-medium text-foreground/80'>Tracer is available now 🚀!</p>
+        <p className='mb-2 mt-1 text-sm text-muted-foreground'>
           Search millions of community-reported records to check if an account
           number is associated with scams before you transfer money.
         </p>
@@ -88,10 +88,10 @@ const products = [
     images: ['./easplit_1.png', './easplit_2.png'],
     description: (
       <>
-        <p className='font-medium text-white/80'>
+        <p className='font-medium text-foreground/80'>
           Easy split is available now 🚀!
         </p>
-        <p className='mb-2 mt-1 text-sm text-white/70'>
+        <p className='mb-2 mt-1 text-sm text-muted-foreground'>
           Easplit is a simple yet powerful expense-sharing app that makes
           splitting bills with friends and family effortless. Track shared
           expenses, manage group budgets, and settle up with just a few taps.
@@ -109,10 +109,10 @@ const products = [
     images: ['./easygacha_1.png', './easygacha_2.png'],
     description: (
       <>
-        <p className='font-medium text-white/80'>
+        <p className='font-medium text-foreground/80'>
           Easy Gacha is available now 🚀!
         </p>
-        <p className='mb-2 mt-1 text-sm text-white/70'>
+        <p className='mb-2 mt-1 text-sm text-muted-foreground'>
           EasyGacha is an easy and fast way to enjoy gacha games. Dive into a
           world of excitement and collect your favorite characters with ease.
           Join the fun and start your gacha journey today!

@@ -33,7 +33,7 @@ const workingHistory: IWorkingHistory[] = [
     duration: '2022',
     title: 'Software Engineer',
     body: `Led cross-cultural development initiatives across Vietnam and US teams, spearheading the architecture and implementation of features leveraging AWS, React, and Node.js ecosystem. Pioneered the development of scalable in-house React component libraries using TurboRepo, enabling efficient mono-repo management and streamlined development workflows.`,
-    img: 'https://fptsoftware.com/-/media/project/fpt-software/fso/uplift/logo-fpt.png?modified=20241017090751',
+    img: 'https://infosec.ptit.edu.vn/wp-content/uploads/sites/20/2026/04/image9.png',
     achievements: [
       "2022's Top performer",
       "2021's Top performer",

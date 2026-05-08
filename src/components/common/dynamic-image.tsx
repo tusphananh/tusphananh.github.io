@@ -68,7 +68,7 @@ function DynamicImage(props: IDynamicImageProps) {
         />
       </div>
       {figcaption && (
-        <figcaption className='mt-2 w-full text-center text-xs italic text-zinc-500'>
+        <figcaption className='mt-2 w-full text-center text-xs italic text-muted-foreground'>
           {figcaption}
         </figcaption>
       )}

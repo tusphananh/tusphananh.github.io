@@ -35,6 +35,21 @@ const travels = [
       '0b2df73a-c74b-4f66-970f-46f2fe206900',
     ],
   },
+  {
+    title: '🇮🇩 Indonesia',
+    description: `Ventured across the Indonesian archipelago, immersing in the vibrant tapestry of cultures, cuisines, and landscapes that make this nation a captivating mosaic. From the bustling streets of Jakarta to the spiritual heart of Bali, the journey offered a profound appreciation for Indonesia's rich heritage and natural beauty.`,
+    images: [],
+  },
+  {
+    title: '🇯🇵 Japan',
+    description: `Explored the captivating contrast of Japan, where centuries-old tradition meets cutting-edge innovation at every turn. From the neon-lit avenues of Tokyo to the tranquil temple gardens of Kyoto, this journey delivered an unforgettable lesson in craftsmanship, hospitality, and the quiet poetry of everyday life.`,
+    images: [],
+  },
+  {
+    title: '🇨🇳 China',
+    description: `Traversed the vastness of China, witnessing the seamless coexistence of ancient dynasties and rapidly evolving modern megacities. From walking the Great Wall to navigating the futuristic skyline of Shanghai, the experience revealed the depth, scale, and dynamism that define China today.`,
+    images: [],
+  },
 ];
 
 export default function Travel() {

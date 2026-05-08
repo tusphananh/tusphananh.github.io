@@ -29,7 +29,7 @@ export default function ProductCard(props: {
             <a target='_blank' className='font-semibold underline' href={url}>
               {name}
             </a>
-            <h3 className='text-sm text-white/40'>{date}</h3>
+            <h3 className='text-sm text-muted-foreground'>{date}</h3>
           </span>
         </div>
 

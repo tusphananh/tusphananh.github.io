@@ -91,6 +91,11 @@ const DATA = {
         url: CommonInfo.facebook,
         icon: Icons.facebook,
       },
+      youtube: {
+        name: 'YouTube',
+        url: CommonInfo.youtube,
+        icon: Icons.youtube,
+      },
     },
   },
 };
