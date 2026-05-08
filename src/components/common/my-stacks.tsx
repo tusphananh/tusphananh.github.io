@@ -37,8 +37,11 @@ export function MyStacks() {
 
   return (
     <RevealScroll
-      items={renderedIcons.map((icon) => (
-        <div className='flex items-center justify-center rounded-full bg-gray-500/10 p-3 backdrop-blur-sm dark:bg-gray-100/10'>
+      items={renderedIcons.map((icon, index) => (
+        <div
+          key={slugs[index]}
+          className='flex items-center justify-center rounded-full bg-gray-500/10 p-3 backdrop-blur-sm dark:bg-gray-100/10'
+        >
           {icon}
         </div>
       ))}
