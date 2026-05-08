@@ -28,6 +28,25 @@ const products = [
       'https://www.linkedin.com/posts/choiee_choiee-startup-demoday-activity-7239206586202644480-16-6',
   },
   {
+    name: 'Travel Planner',
+    date: 'January 2025',
+    url: 'https://travelplanner.simplitech.app',
+    logo: 'https://travelplanner.simplitech.app/logo.png',
+    images: ['./travel_planner_1.png', './travel_planner_2.png'],
+    description: (
+      <>
+        <p className='font-medium text-white/80'>
+          Travel Planner is available now 🚀!
+        </p>
+        <p className='mb-2 mt-1 text-sm text-white/70'>
+          Travel Planner helps you organize trips effortlessly — build
+          itineraries, discover destinations, and keep every detail of your
+          journey in one place.
+        </p>
+      </>
+    ),
+  },
+  {
     name: 'Simplitech',
     date: 'January 2025',
     url: 'https://simplitech.app',
